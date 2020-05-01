@@ -1,0 +1,1 @@
+﻿Search-ADAccount -SearchBase "OU=Contractors,OU=TenableUsers,DC=corp,DC=tenablesecurity,DC=com" -UsersOnly -ResultPageSize 2000 -resultSetSize $null| Select-Object Name, SamAccountName, DistinguishedName, AccountExpirationDate

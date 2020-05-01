@@ -1,0 +1,1 @@
+msiexec.exe /i /q "C:\Installs\Firefox Setup 68.0.1.msi" 
