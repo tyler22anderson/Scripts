@@ -3,10 +3,10 @@ import json
 import csv
 
 #Variables for this plugin
-api_base_url = 'https://tns.freshservice.com/api/'
-api_token = "y6qUoFNRltXmNF61SD"
+api_base_url = 'https://example.freshservice.com/api/'
+api_token = "API KEY"
 
-r = requests.get('https://tns.freshservice.com/api/assets?per_page=100', auth=(api_token,'x'))
+r = requests.get('https://example.freshservice.com/api/assets?per_page=100', auth=(api_token,'x'))
 
 data = json.loads(r.content)
 
@@ -15,7 +15,7 @@ with open('/home/tanderson/Scripts/serial_numbers.csv', 'rb') as csvfile:
     for row in s:
         print ', '.join(row)
         for serial in row:
-            r = requests.get("https://tns.freshservice.com/cmdb/items/list.json?field=serial_number&q=" + serial , auth=(api_token,'x'))
+            r = requests.get("https://example.freshservice.com/cmdb/items/list.json?field=serial_number&q=" + serial , auth=(api_token,'x'))
 
             data = json.loads(r.content)
 
