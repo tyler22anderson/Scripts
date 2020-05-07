@@ -10,7 +10,7 @@ If ($contractor -like "*.ctr")
     {
 
     #Changes the users OU to the AMER OU
-    Get-ADUser $contractor | Move-ADObject -TargetPath 'OU=AMER,OU=TenableUsers,DC=corp,DC=tenablesecurity,DC=com'
+    Get-ADUser $contractor | Move-ADObject -TargetPath 'OU=example'
 
     #Trims the username of the .ctr and stores it in a new variable
     $NewSamName = $contractor -split ".ctr"
