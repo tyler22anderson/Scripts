@@ -1,7 +1,7 @@
 ﻿# Get all Bitlocker Objects from AD
 
 Import-Module Mysqlcmdlets
-Connect-MySqlServer -Server 192.168.206.150 -Credential (Get-Credential)
+Connect-MySqlServer -Server [IP] -Credential (Get-Credential)
 
 
 $BitLockerObjects = Get-ADObject -Filter { objectclass -eq 'msFVE-RecoveryInformation' }
