@@ -31,4 +31,4 @@ foreach ($group in $userGroups) {
 Disable-ADAccount -Identity $username -Confirm:$false
 
 #moves the account
-Get-ADUser $username | Move-ADObject -TargetPath "OU=Disabled Users,DC=corp,DC=tenablesecurity,DC=com" -Confirm:$false
+Get-ADUser $username | Move-ADObject -TargetPath "OU=Disabled Users" -Confirm:$false
