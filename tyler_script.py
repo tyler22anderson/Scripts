@@ -4,8 +4,8 @@ import sys
 import requests
 
 # Variables for this plugin
-api_base_url = 'https://tns.freshservice.com/api/'
-api_token = "4700QYteFL95EYoT2tk"
+api_base_url = 'https://example.freshservice.com/api/'
+api_token = "API"
 
 with open('/home/tanderson/Scripts/serial_numbers.csv', 'r') as csvfile:
     serials = None
@@ -15,7 +15,7 @@ with open('/home/tanderson/Scripts/serial_numbers.csv', 'r') as csvfile:
         print("Found {} serial numbers.".format(len(serials)))
         serial_dict = {}
         for serial in serials:
-            r = requests.get("https://tns.freshservice.com/cmdb/items/list.json?field=serial_number&q=s" + serial,
+            r = requests.get("https://example.freshservice.com/cmdb/items/list.json?field=serial_number&q=s" + serial,
                              auth=(api_token, 'x'))
             if r.status_code == 200:
                 data = r.json()
