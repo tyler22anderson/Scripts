@@ -1,5 +1,5 @@
-﻿$apikey = "y6qUoFNRltXmNF61SD"
-$URI = "https://tns.freshservice.com/api/v2/agents.json"
+﻿$apikey = "API KEY"
+$URI = "https://example.freshservice.com/api/v2/agents.json"
 #$cred = Get-Credential
 $headers = @{}
 $EncodedCredentials = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $APIKey,$null)))
